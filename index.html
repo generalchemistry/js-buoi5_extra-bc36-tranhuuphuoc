@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+
+        .alert{
+            padding:0;
+            display:none;
+            color:red;
+        }
+
+        .result{
+            display:block;
+            color:forestgreen;
+        }
+        .row{
+            margin-right:0;
+            margin-left:0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container p-0 my-3">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="exercise1-tab" data-toggle="tab" data-target="#exercise1"
+                    type="button" role="tab" aria-controls="exercise1-tab" aria-selected="true">
+                    Exercise 1
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="exercise2-tab" data-toggle="tab" data-target="#exercise2" type="button"
+                    role="tab" aria-controls="exercise2-tab" aria-selected="true">
+                    Exercise 2
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="exercise3-tab" data-toggle="tab" data-target="#exercise3" type="button"
+                    role="tab" aria-controls="exercise3-tab" aria-selected="true">
+                    Exercise 3
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="exercise4-tab" data-toggle="tab" data-target="#exercise4" type="button"
+                    role="tab" aria-controls="exercise4-tab" aria-selected="true">
+                    Exercise 4
+                </button>
+            </li>
+
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="exercise1" role="tabpanel" aria-labelledby="exercise1-tab">
+                <div class="form-group mt-3 ">
+                    <div class="row justify-content-between">
+                        <input type="number" id="standardPoint" placeholder="Điểm chuẩn đại học" class="form-control col-3" >
+                        <select id="contestantArea" class="form-control col-3">
+                            
+                            <option value="areaA">Khu vực A</option>
+                            <option value="areaB">Khu vực B</option>
+                            <option value="areaC">Khu vực C</option>
+                            <option value="areanull" selected>Khu vực không ưu tiên</option>
+                        </select>
+                        <select id="contestantSubject" class="form-control col-3">
+                            
+                            <option value="object1">Đối tượng 1</option>
+                            <option value="object2">Đối tượng 2</option>
+                            <option value="object3">Đối tượng 3</option>
+                            <option value="objectnull" selected>Đối tượng không ưu tiên</option>
+                        </select>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row justify-content-between my-3" id="studentPoint">
+                        <input type="number" placeholder="Điểm môn 1" class="form-control col-3" >
+                        <input type="number" placeholder="Điểm môn 2" class="form-control col-3" >
+                        <input type="number" placeholder="Điểm môn 3" class="form-control col-3" >
+                        <div class="col-2"></div>
+                    </div>
+                    <button class="btn btn-success col-2 mb-3">Tra kết quả</button>
+                    <span class="result">
+                    </span>
+                </div>
+            </div>
+            <div class="tab-pane" id="exercise2" role="tabpanel" aria-labelledby="exercise2-tab">
+                <div class="form-group mt-3 ">
+                    <div class="row">
+                        <label for="nameCustomer" class="col-3 px-0">Tên</label>
+                        <div class="col-2"></div>
+                        <label for="electricConsume" class="col-3 px-0">Số kWh tiêu thụ</label>
+                    </div>
+                    <div class="row mb-3">
+                        <input class="form-control col-3"type="text" placeholder="Nhập tên của bạn" id="nameCustomer">
+                        <div class="col-2"></div>
+                        <input class="form-control col-3"type="number" placeholder="Nhập số kWh tiêu thụ" id="electricConsume">
+                    </div>
+                    <button class="btn btn-success col-2 mb-3">Tính tiền điện</button>
+                    <span class="result">
+                    </span>
+
+                </div>
+            </div>
+            <div class="tab-pane" id="exercise3" role="tabpanel" aria-labelledby="exercise3-tab">
+                <div class="form-group mt-3 ">
+                    <div class="row justify-content-between">
+                        <label for="nameCsm" class="col-3 px-0">Tên</label>
+                        <label for="totalIncome" class="col-3 px-0">Tổng thu nhập năm</label>
+                        <label for="numDepend" class="col-3 px-0">Số người phụ thuộc</label>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row mb-3 justify-content-between">
+                        <input class="form-control col-3"type="text" placeholder="Nhập tên của bạn" id="nameCsm">
+                        <input class="form-control col-3"type="number" placeholder="Nhập tổng thu nhập (triệu)" id="totalIncome">
+                        <input class="form-control col-3"type="number" placeholder="Nhập số người" id="numDepend">
+                        <div class="col-2"></div>
+                    </div>
+                    <button class="btn btn-success col-2 mb-3">Tính thuế thu nhập</button>
+                    <span class="result">
+                    </span>
+                </div>
+            </div>
+            <div class="tab-pane" id="exercise4" role="tabpanel" aria-labelledby="exercise4-tab">
+                <div class="form-group mt-3 ">
+                    <div class="row mb-3">
+                        <select name="typeCsm" id="typeCsm" class="form-control col-3 mr-3">
+                            <option value="" selected>Chọn loại khách hàng</option>
+                            <option value="individualCsm">Nhà dân</option>
+                            <option value="businessCsm">Doanh nghiệp</option>
+                        </select>
+                        <input class="form-control col-3 mr-3" type="text" placeholder="Nhập mã khách hàng" id="idCsm">
+                        <input class="form-control col-2 mr-3" type="number" placeholder="Nhập số kênh cao cấp" id="numChannel">
+                        <input class="form-control col-2 d-none" type="number" placeholder="Nhập số kết nối" id="numConnect">
+                    </div>
+                    <div class="row mb-3 justify-content-between">
+                        
+                    </div>
+                    <button class="btn btn-success col-2 mb-3">Tính tiền cáp</button>
+                    <span class="result">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+        <script src="./javascript/index.js"></script>
+</body>
+
+</html>
